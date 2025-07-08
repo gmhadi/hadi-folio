@@ -1,0 +1,696 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  .font-signature {
+    font-family: 'Great Vibes', cursive;
+  }
+</style>
+<style>
+    @keyframes gradientPulse {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .animate-gradient-circle {
+      background-size: 200% 200%;
+      animation: gradientPulse 4s ease infinite;
+    }
+  </style>
+  <style>
+@keyframes gradientMove {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.gradient-animated-text {
+  background-size: 200% 200%;
+  animation: gradientMove 5s ease infinite;
+}
+</style>
+<style>
+@keyframes gradientPulse {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.circle-glow {
+  background-size: 200% 200%;
+  animation: gradientPulse 5s ease infinite;
+}
+</style>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+
+  </head>
+  <body class="scroll-smooth">
+ <!-- Alpine.js -->
+<script src="https://unpkg.com/alpinejs" defer></script>
+
+<!-- Header Start -->
+<header class="bg-black text-white sticky top-0 z-50 shadow-md" x-data="{ expanded: false }">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+    <div class="flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center text-white font-medium">
+        <div class="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full flex items-center justify-center font-bold text-xl">
+          AH
+        </div>
+        <span class="ml-3 text-xl font-semibold">            Abdul Hadi</span>
+      </a>
+
+      <!-- Hamburger Icon -->
+      <div class="md:hidden">
+        <button @click="expanded = !expanded" class="focus:outline-none">
+          <span x-show="!expanded">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </span>
+          <span x-show="expanded">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </span>
+        </button>
+      </div>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-8 text-sm font-medium">
+        <a href="#hero" class="text-gray-400 hover:text-white transition">Home</a>
+        <a  href="#journey" class="text-gray-400 hover:text-white transition">My Journey</a>
+        <a  href="#skills" class="text-gray-400 hover:text-white transition">Skills</a>
+        <a  href="#about" class="text-gray-400 hover:text-white transition">About Me</a>
+        <a  href="#projects" class="text-gray-400 hover:text-white transition">My Projects</a>
+        <a  href="#certifications" class="text-gray-400 hover:text-white transition">Certifications</a>
+        <a  href="#testimonials" class="text-gray-400 hover:text-white transition">Testimonials</a>
+        <a  href="#contact" class="text-gray-400 hover:text-white transition">Get in Touch</a>
+        <a  href="#start-project" class="text-gray-400 hover:text-white transition">Start a Project</a>
+         <a href="#footer" class="text-gray-400 hover:text-white transition">Find Us</a>
+      </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden mt-4" x-show="expanded" x-transition>
+      <nav class="flex flex-col space-y-4 text-sm font-medium">
+        <a  href="#hero" class="text-gray-400 hover:text-white">Home</a>
+        <a  href="#journey" class="text-gray-400 hover:text-white">My Journey</a>
+        <a  href="#skills" class="text-gray-400 hover:text-white">Skills</a>
+        <a  href="#about" class="text-gray-400 hover:text-white">About Me</a>
+        <a  href="#certifications" class="text-gray-400 hover:text-white">Certifications</a>
+        <a  href="#testimonials" class="text-gray-400 hover:text-white">Testimonials</a>
+        <a  href="#contact" class="text-gray-400 hover:text-white">Get in Touch</a>
+        <a  href="#start-project" class="text-gray-400 hover:text-white">Start a Project</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<!-- Header End -->
+
+                                                            <!-- header end -->
+                                                             <!-- hero start -->
+<section id="hero" class="py-12 bg-black sm:pb-16 lg:pb-20 xl:pb-24">
+  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+    <div class="relative">
+      
+      <!-- Left Text Content -->
+      <div class="lg:w-2/3">
+        <p class="text-sm font-normal tracking-widest text-gray-300 uppercase">
+          Web Developer • UI Designer • Freelancer
+        </p>
+
+        <h1 class="mt-6 text-4xl font-semibold text-white sm:mt-10 sm:text-5xl lg:text-6xl xl:text-7xl leading-tight">
+          Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500">Abdul Hadi</span><br />
+          I Build Web <br> Experiences <br> That Work
+        </h1>
+
+        <p class="max-w-lg mt-4 text-xl font-normal text-gray-400 sm:mt-8">
+          I help startups, agencies, and brands build responsive, fast, and clean websites using modern web technologies.
+        </p>
+
+        <!-- CTA Button -->
+        <div class="relative inline-flex items-center justify-center mt-8 sm:mt-12 group">
+          <div class="absolute transition-all duration-200 rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500 group-hover:shadow-lg group-hover:shadow-cyan-500/50"></div>
+          <a href="#projects"
+            class="relative inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-black border border-transparent rounded-full">
+            View My Work
+          </a>
+        </div>
+
+        <!-- Mini stat -->
+        <div class="inline-flex items-center pt-6 mt-8 border-t border-gray-800 sm:pt-10 sm:mt-14">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 7.00003H21M21 7.00003V15M21 7.00003L13 15L9 11L3 17" stroke="url(#a)" stroke-linecap="round" stroke-linejoin="round" />
+            <defs>
+              <linearGradient id="a" x1="3" y1="7.00003" x2="22.2956" y2="12.0274" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#06b6d4" />
+                <stop offset="100%" stop-color="#a855f7" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <span class="ml-2 text-base font-normal text-white">
+            Trusted by 20+ clients across Pakistan and beyond
+          </span>
+        </div>
+      </div>
+
+      <!-- Right Side Image -->
+      <div class="mt-8 md:absolute md:mt-0 md:top-32 lg:top-0 md:right-0">
+        <img class="w-full max-w-xs mx-auto lg:max-w-lg xl:max-w-xl"
+          src="https://landingfoliocom.imgix.net/store/collection/dusk/images/hero/1/3d-illustration.png"
+          alt="3D Developer Illustration" />
+      </div>
+    </div>
+  </div>
+</section>
+<!-- hero end -->
+
+                                                                         <!-- my journey -->
+<section id="journey" class="py-10 bg-black sm:py-16 lg:py-24">
+  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    
+    <!-- Section Heading -->
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 gradient-animated-text sm:text-4xl lg:text-5xl">
+  My Journey
+</h2>
+
+      <p class="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-300">
+        From self-learning to launching real-world web projects — here's how I grew as a developer.
+      </p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative mt-12 lg:mt-20">
+      <div class="absolute inset-x-0 hidden xl:px-44 top-2 md:block md:px-20 lg:px-28">
+        <img class="w-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/2/curved-dotted-line.svg" alt="Timeline" />
+      </div>
+
+      <div class="relative grid grid-cols-1 text-center gap-y-12 md:grid-cols-3 gap-x-12">
+
+        <!-- Step 1 -->
+        <div >
+        <div class="flex items-center justify-center w-16 h-16 mx-auto rounded-full shadow-lg
+            bg-gradient-to-r from-cyan-500 to-purple-600 circle-glow border-2 border-transparent">
+  <span class="text-xl font-bold text-white">1</span>
+</div>
+
+          <h3 class="mt-6 text-xl font-semibold leading-tight text-white md:mt-10">
+            Started Learning Web Development
+          </h3>
+          <p class="mt-4 text-base text-gray-400">
+            Began with HTML, CSS, and JavaScript. Built small UI components and explored frontend logic step-by-step.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div>
+          <div class="flex items-center justify-center w-16 h-16 mx-auto rounded-full shadow-lg
+            bg-gradient-to-r from-cyan-500 to-purple-600 circle-glow border-2 border-transparent">
+  <span class="text-xl font-bold text-white">2</span>
+</div>
+
+          <h3 class="mt-6 text-xl font-semibold leading-tight text-white md:mt-10">
+            Built Real Projects
+          </h3>
+          <p class="mt-4 text-base text-gray-400">
+            Created websites, dashboards, and landing pages using Tailwind CSS, React, and Firebase. Uploaded to GitHub & Vercel.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div>
+          <div class="flex items-center justify-center w-16 h-16 mx-auto rounded-full shadow-lg
+            bg-gradient-to-r from-cyan-500 to-purple-600 circle-glow border-2 border-transparent">
+  <span class="text-xl font-bold text-white">3</span>
+</div>
+
+          <h3 class="mt-6 text-xl font-semibold leading-tight text-white md:mt-10">
+            Freelance & Portfolio Launch
+          </h3>
+          <p class="mt-4 text-base text-gray-400">
+            Started taking freelance projects. Designed and deployed this personal portfolio to showcase my skills and journey.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- my journey -->
+
+                                                                             <!-- skills -->
+<section id="skills" class="py-12 bg-black sm:py-16 lg:py-20">
+  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+    <div class="max-w-md mx-auto text-center">
+      <h2 class="text-3xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 gradient-animated-text sm:text-4xl lg:text-5xl">
+  My core skills</h2>
+      <p class="mt-4 text-base font-normal leading-7 text-gray-300">Technologies I specialize in — for building fast, responsive, and modern web experiences.</p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-6 mt-10 lg:mt-16 lg:gap-4 lg:grid-cols-4">
+      <!-- Skill 1 -->
+      <div class="relative group">
+        <div class="overflow-hidden aspect-w-1 aspect-h-1 bg-white p-4">
+          <img class="object-contain w-full h-full transition-all duration-300 group-hover:scale-110" src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML5" />
+        </div>
+        <div class="flex flex-col mt-4">
+          <h3 class="text-sm font-bold text-white">HTML5</h3>
+          <p class="text-xs text-gray-400">Clean, semantic, SEO-friendly markup.</p>
+          <div class="flex mt-2 space-x-1">
+            <span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-gray-500">★</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill 2 -->
+      <div class="relative group">
+        <div class="overflow-hidden aspect-w-1 aspect-h-1 bg-white p-4">
+          <img class="object-contain w-full h-full transition-all duration-300 group-hover:scale-110" src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS3" />
+        </div>
+        <div class="flex flex-col mt-4">
+          <h3 class="text-sm font-bold text-white">CSS3</h3>
+          <p class="text-xs text-gray-400">Responsive layouts, flexbox, and animations.</p>
+          <div class="flex mt-2 space-x-1">
+            <span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-gray-500">★</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill 3 -->
+      <div class="relative group">
+        <div class="overflow-hidden aspect-w-1 aspect-h-1 bg-white p-4">
+          <img class="object-contain w-full h-full transition-all duration-300 group-hover:scale-110" src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" />
+        </div>
+        <div class="flex flex-col mt-4">
+          <h3 class="text-sm font-bold text-white">JavaScript</h3>
+          <p class="text-xs text-gray-400">Interactive UIs and dynamic client-side logic.</p>
+          <div class="flex mt-2 space-x-1">
+            <span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-yellow-400">★</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill 4 -->
+      <div class="relative group">
+        <div class="overflow-hidden aspect-w-1 aspect-h-1 bg-white p-4">
+          <img class="object-contain w-full h-full transition-all duration-300 group-hover:scale-110" src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" alt="React" />
+        </div>
+        <div class="flex flex-col mt-4">
+          <h3 class="text-sm font-bold text-white">React.js</h3>
+          <p class="text-xs text-gray-400">Component-based architecture & SPA logic.</p>
+          <div class="flex mt-2 space-x-1">
+            <span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-yellow-400">★</span><span class="text-gray-500">★</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+                                                                                   <!-- skills end -->
+
+
+                                                                                <!-- about us -->
+<section id="about" class="py-12 bg-gradient-to-b from-black via-[#0d021a] to-black text-white">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center">
+    
+    <!-- Image -->
+    <div class="md:w-1/2 mb-8 md:mb-0">
+      <img src="https://pbs.twimg.com/profile_images/1937222184939732992/Vj1wsrT2_400x400.jpg" alt="Abdul Hadi" class="rounded-lg shadow-lg w-full">
+    </div>
+    
+    <div class="md:w-1/2 md:pl-12">
+  <h2 class="text-3xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 gradient-animated-text sm:text-4xl lg:text-5xl">
+    About Me
+  </h2>
+  <p class="text-lg mb-4">
+    I'm <strong>Abdul Hadi</strong>, a passionate Front-End Developer who loves turning ideas into reality using code. I specialize in HTML, CSS, Tailwind, JavaScript, and React.
+  </p>
+  <p class="text-lg mb-4">
+    I enjoy building clean, modern, responsive websites and am always eager to learn and grow. Currently, I'm learning backend technologies to become a Full Stack Developer.
+  </p>
+  <p class="text-lg">
+    I'm also the <strong>CEO & Founder</strong> of 
+    <a href="https://hadiqah-agency.vercel.app/" target="_blank" class="text-cyan-400 hover:underline">
+      Hadiqah SDA (Software Development Agency)
+    </a>, where we help businesses establish a strong online presence.
+  </p>
+      <a href="https://drive.google.com/file/d/1N4aSQlXG8dSSpQXNF9kzq0eVO8XTqtUs/view" class="inline-block mt-4 px-6 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition" target="_blank">
+        Download Resume
+      </a>
+    </div>
+
+  </div>
+</section>
+                                                                          <!-- about us end -->
+                                                                           <!-- projects -->
+<!-- My Projects Start -->
+<section id="projects" class="py-16 bg-[#111113] text-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">My Projects</h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+        Here are some of the featured projects I've worked on — beautifully designed and functionally strong.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+      <!-- Project 1 -->
+      <a href="https://teachablemachine.withgoogle.com/models/FtEtMVSL-/" target="_blank" class="bg-[#1a1a1a] p-6 rounded-xl shadow-md hover:shadow-purple-500/30 transition duration-300">
+        <img src="https://lspector.github.io/tools/assets/images/24.jpeg">
+        <h3 class="text-xl font-semibold mb-2">Teachable Machine</h3>
+        <p class="text-gray-400 text-sm">Brief description of the project goes here. Keep it simple and engaging.</p>
+      </a>
+
+      <!-- Project 2 -->
+      <a href="#" target="_blank" class="bg-[#1a1a1a] p-6 rounded-xl shadow-md hover:shadow-purple-500/30 transition duration-300">
+        <img src="https://via.placeholder.com/600x350" alt="Project 2" class="rounded-md mb-4 w-full h-48 object-cover">
+        <h3 class="text-xl font-semibold mb-2">Project Title 2</h3>
+        <p class="text-gray-400 text-sm">Brief description of the project goes here. Keep it simple and engaging.</p>
+      </a>
+
+      <!-- Project 3 -->
+      <a href="#" target="_blank" class="bg-[#1a1a1a] p-6 rounded-xl shadow-md hover:shadow-purple-500/30 transition duration-300">
+        <img src="https://via.placeholder.com/600x350" alt="Project 3" class="rounded-md mb-4 w-full h-48 object-cover">
+        <h3 class="text-xl font-semibold mb-2">Project Title 3</h3>
+        <p class="text-gray-400 text-sm">Brief description of the project goes here. Keep it simple and engaging.</p>
+      </a>
+
+      <!-- Project 4 -->
+      <a href="#" target="_blank" class="bg-[#1a1a1a] p-6 rounded-xl shadow-md hover:shadow-purple-500/30 transition duration-300">
+        <img src="https://via.placeholder.com/600x350" alt="Project 4" class="rounded-md mb-4 w-full h-48 object-cover">
+        <h3 class="text-xl font-semibold mb-2">Project Title 4</h3>
+        <p class="text-gray-400 text-sm">Brief description of the project goes here. Keep it simple and engaging.</p>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- My Projects End -->
+
+                                                                          <!-- projects end -->
+                                                                          <!-- Certifications -->
+<section id="certifications" class="py-16 bg-gradient-to-b from-black via-gray-900 to-black">
+  <div class="max-w-7xl px-6 mx-auto sm:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 gradient-animated-text sm:text-4xl lg:text-5xl">
+  My Certifications</h2>
+      <p class="mt-3 text-lg text-gray-400">Recognized by leading platforms for completing professional courses and hands-on learning.</p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- Coursera -->
+      <div class="bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
+        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera.s3.amazonaws.com/media/coursera-rebrand-logo-square.png?auto=format%2Ccompress&dpr=1" alt="Coursera" class="h-12 mx-auto object-contain" />
+        <p class="text-center mt-4 text-sm text-gray-300">Coursera Certified</p>
+      </div>
+
+      <!-- freeCodeCamp -->
+      <div class="bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
+        <img src="https://yt3.googleusercontent.com/ytc/AIdro_lGRc-05M2OoE1ejQdxeFhyP7OkJg9h4Y-7CK_5je3QqFI=s900-c-k-c0x00ffffff-no-rj" alt="freeCodeCamp" class="h-12 mx-auto object-contain" />
+        <p class="text-center mt-4 text-sm text-gray-300">freeCodeCamp Achiever</p>
+      </div>
+
+      <!-- Saylani -->
+      <div class="bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
+        <img src="https://scontent.fkhi21-1.fna.fbcdn.net/v/t39.30808-6/409008321_122094513620153270_4706994950135841760_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=FU8JPvb1seYQ7kNvwFC4cAZ&_nc_oc=Adm5sB0NuPSmlOTIlGnhLUWcagAcWgd-A52IzpI0chhmRJJigKF4sDttI0s9ruUVeUk&_nc_zt=23&_nc_ht=scontent.fkhi21-1.fna&_nc_gid=mkTr9BPiVlNCoF8vCEx2-g&oh=00_AfTSff-30cqWJCUWDjFcGO8ssO0cI7JARehpm5QfM75Gxg&oe=687206F4" alt="Saylani" class="h-12 mx-auto object-contain" />
+        <p class="text-center mt-4 text-sm text-gray-300">Saylani Web & App Dev</p>
+      </div>
+
+      <!-- JavaScript Badge -->
+      <div class="bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" alt="JavaScript" class="h-12 mx-auto object-contain" />
+        <p class="text-center mt-4 text-sm text-gray-300">JavaScript Proficiency</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+                                                                            <!-- testimonials -->
+<section id="testimonials" class="py-16 bg-gradient-to-br from-black via-[#0f0f1a] to-black text-white">
+  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <p class="text-base font-medium text-purple-300">💬 2,157 reviews and counting</p>
+      <h2 class="text-3xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 gradient-animated-text sm:text-4xl lg:text-5xl">What Our Clients Say</h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 relative z-10">
+      <!-- Gradient Blur Background -->
+      <div class="absolute inset-0 z-0 flex items-center justify-center">
+        <div class="w-3/4 h-3/4 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 opacity-20 blur-3xl rounded-full"></div>
+      </div>
+
+<!-- Testimonial 1 -->
+        <div class="p-6 bg-[#2c2c3f] rounded-xl shadow-lg border border-white/10">
+          <div class="flex items-center gap-1 mb-4 text-yellow-400">
+            <span>★★★★★</span>
+          </div>
+          <p class="text-lg mb-6">“You made it so simple. My new site is much faster and easier to work with than my old one. I just choose the page and make the change.”</p>
+          <div class="flex items-center">
+            <img class="w-12 h-12 rounded-full object-cover" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png" alt="Leslie Alexander">
+            <div class="ml-4">
+              <p class="font-bold">Leslie Alexander</p>
+              <p class="text-sm text-gray-400">Freelance React Developer</p>
+            </div>
+          </div>
+        </div>
+      <!-- Repeat 2 more testimonial cards below with different content as needed -->
+    <!-- Testimonial 2 -->
+        <div class="p-6 bg-[#2c2c3f] rounded-xl shadow-lg border border-white/10">
+          <div class="flex items-center gap-1 mb-4 text-yellow-400">
+            <span>★★★★★</span>
+          </div>
+          <p class="text-lg mb-6">“Simply the best. Better than all the rest. I’d recommend this product to both beginners and pros without hesitation.”</p>
+          <div class="flex items-center">
+            <img class="w-12 h-12 rounded-full object-cover" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png" alt="Jacob Jones">
+            <div class="ml-4">
+              <p class="font-bold">Jacob Jones</p>
+              <p class="text-sm text-gray-400">Digital Marketer</p>
+            </div>
+          </div>
+        </div>
+          <!-- Testimonial 3 -->
+        <div class="p-6 bg-[#2c2c3f] rounded-xl shadow-lg border border-white/10">
+          <div class="flex items-center gap-1 mb-4 text-yellow-400">
+            <span>★★★★★</span>
+          </div>
+          <p class="text-lg mb-6">“I can’t believe how easy it was to get started. The whole process was smooth, and I love the final result. Highly recommended!”</p>
+          <div class="flex items-center">
+            <img class="w-12 h-12 rounded-full object-cover" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png" alt="Jenny Wilson">
+            <div class="ml-4">
+              <p class="font-bold">Jenny Wilson</p>
+              <p class="text-sm text-gray-400">Graphic Designer</p>
+            </div>
+          </div>
+        </div>
+        
+
+    </div>
+
+    <div class="mt-10 text-center">
+      <a href="#" class="inline-block text-purple-300 font-semibold hover:underline hover:text-purple-400 transition">See All 2,157 Reviews</a>
+    </div>
+  </div>
+</section>
+
+                                                                                <!-- contact start -->
+<section id="contact" class="py-16 bg-gradient-to-br from-black via-[#121212] to-[#1a1a1a]">
+  <div class="max-w-7xl mx-auto px-6 lg:flex lg:items-center lg:justify-between gap-12">
+    
+    <!-- Left Content -->
+    <div class="mb-12 lg:mb-0 lg:w-1/2">
+      <p class="text-sm tracking-wider uppercase text-indigo-400 font-medium mb-3">Have a project in mind?</p>
+      <h2 class="text-3xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 gradient-animated-text sm:text-4xl lg:text-5xl">
+        We help you to<br> grow your business<br> faster & easier.
+      </h2>
+      <p class="text-gray-400 text-base">
+        We specialize in turning ideas into impactful digital products. Share your vision — we’ll handle the rest.
+      </p>
+    </div>
+
+    <!-- Right Form Box -->
+    <div class="lg:w-1/2 bg-[#0e0e0e] rounded-2xl shadow-2xl px-8 py-10 border border-gray-800 backdrop-blur-md">
+      <h3 class="text-white text-lg font-medium mb-6">
+        Let us know about your project & we will help you grow your business from scratch.
+      </h3>
+
+      <form action="https://formsubmit.co/maihadihoon@gmail.com" method="POST" class="space-y-5">
+  
+  <!-- ✅ Hidden inputs -->
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+
+  <!-- 👇 Your fields -->
+  <input type="text" name="name" placeholder="First & Last name" required
+    class="w-full bg-transparent border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+  <input type="email" name="email" placeholder="Email address" required
+    class="w-full bg-transparent border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+  <input type="tel" name="phone" placeholder="Phone number"
+    class="w-full bg-transparent border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+  <textarea name="message" rows="4" placeholder="Write your message" required
+    class="w-full bg-transparent border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+
+  <button type="submit"
+    class="w-full rounded-lg px-6 py-3 font-semibold text-white border border-transparent bg-indigo-600 hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-600 transition-all duration-300">
+    Send Message
+  </button>
+</form>
+
+
+
+
+    </div>
+
+  </div>
+</section>
+<!-- contact end -->
+
+                                                             <!-- cta start -->
+<section id="start-project" class="bg-gradient-to-br from-[#0b0b0b] via-[#111113] to-[#1a1a1a] py-16 rounded-t-2xl">
+  <div class="max-w-7xl mx-auto px-6 lg:flex lg:items-center lg:justify-between gap-12">
+    
+   <!-- Testimonial Card -->
+<div class="mb-12 lg:mb-0 lg:w-1/2">
+  <div class="bg-white p-8 rounded-xl shadow-lg transform rotate-[-2deg] w-full max-w-md">
+    
+
+    <!-- Quote -->
+    <p class="text-gray-800 text-lg leading-relaxed mb-6">
+      “Incredible experience! The team understood exactly what we needed and executed it beautifully. We saw results within weeks.”
+    </p>
+
+    <!-- Author Info -->
+    <div class="flex items-center justify-between">
+      <!-- Profile -->
+      <div class="flex items-center gap-3">
+        <img src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png"
+             alt="Avatar" class="w-12 h-12 rounded-full object-cover">
+        <div>
+          <p class="text-gray-900 font-semibold text-sm sm:text-base">Ali Raza</p>
+          <p class="text-gray-500 text-xs sm:text-sm">Founder, Bcircle</p>
+        </div>
+      </div>
+      <!-- Signature -->
+      <p class="text-gray-600 italic text-xl font-signature">Ali Raza</p>
+    </div>
+  </div>
+</div>
+
+
+    <!-- CTA Text + Input -->
+    <div class="lg:w-1/2">
+      <h2 class="text-white text-4xl font-bold mb-4 leading-tight">
+        Get a demo <br><span class="inline-block">Build landing pages effortlessly.</span>
+      </h2>
+      <p class="text-gray-400 text-base mb-6 max-w-md">
+        Create custom landing pages that convert more visitors. With unique building blocks, you can launch faster and better.
+      </p>
+      
+      <label class="text-white font-medium mb-2 block">
+        Provide your email address to get a free demo:
+      </label>
+      <form class="flex flex-col sm:flex-row items-center gap-4 mt-3">
+        <input type="email" required placeholder="Enter your email address"
+          class="w-full sm:w-auto flex-1 bg-[#0f0f0f] text-white px-5 py-3 rounded-lg border border-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <button type="submit"
+          class="bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg transition-all hover:bg-gradient-to-r from-indigo-500 to-purple-600 shadow-lg hover:shadow-indigo-400/30">
+          Get started now
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>
+<!-- cta end -->
+
+<!-- footer start -->
+<footer class="bg-[#111113] pt-20 pb-10 text-white">
+
+  <!-- CTA Subscribe Box -->
+  <div class="max-w-7xl mx-auto px-6 mb-16">
+    <div class="bg-[#18181b] rounded-2xl px-10 py-8 shadow-xl shadow-indigo-500/10">
+      <div class="sm:flex sm:items-center sm:justify-between gap-6">
+        <h2 class="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-0 leading-tight">
+          Grow your business fast with <br class="sm:hidden" />
+          <span class="text-white">Rareblocks UI Kit.</span>
+        </h2>
+
+        <!-- Subscribe Form -->
+       <input type="email" required placeholder="Enter your email address"
+  class="w-full sm:w-auto flex-1 bg-[#0f0f0f] text-white px-6 py-4 text-base rounded-lg border border-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+          <button type="submit"
+            class="bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg transition-all hover:bg-gradient-to-r from-indigo-500 to-purple-600 shadow-lg hover:shadow-indigo-400/30">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div id="footer" class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-[15px] text-gray-300 leading-relaxed">
+    <div>
+      <h3 class="font-semibold text-white mb-4">Company</h3>
+      <ul class="space-y-3">
+        <li><a href="https://hadiqah-agency.netlify.app/">About Hadiqah</a></li>
+        <li><a href="#skills">Features</a></li>
+        <li><a href="#">Works</a></li>
+        <li><a href="#">Career</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-white mb-4">Help</h3>
+      <ul class="space-y-3">
+        <li><a href="https://hadiqah-agency.netlify.app/">Customer Support</a></li>
+        <li><a href="https://hadiqah-agency.netlify.app/">Delivery Details</a></li>
+        <li><a href="https://hadiqah-agency.netlify.app/">Terms & Conditions</a></li>
+        <li><a href="https://hadiqah-agency.netlify.app/">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+   <div>
+  <h3 class="font-semibold text-white mb-4">Quick Links</h3>
+  <ul class="space-y-3">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Portfolio</a></li>
+    <li><a href="#contact">Contact Me</a></li>
+  </ul>
+</div>
+
+    <div>
+      <h3 class="font-semibold text-white mb-4">Social</h3>
+      <ul class="space-y-3">
+        <li><a href="https://www.facebook.com/people/Abdul-Hadi-Qureshi/pfbid02k2iSxMh3Mz7Z5omUjoaMAMk4mgXsvvNZJK8Rk9jgaAsLbmFid3dH5UsGaBBNNniXl/" target="_blank">Facebook</a></li>
+        <li><a href="https://x.com/maihadihoon" target="_blank">Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/abdul-hadi-kureshi-a9226a369/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/gmhadi" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<!-- footer end -->
+
+         <!-- js files-->
+          
+  </body>
+</html>
